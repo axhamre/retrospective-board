@@ -1,0 +1,27 @@
+version: 2
+registries:
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    # Note: Although this secret is named ORG_PAT_READ_TOOLS, it is scoped specifically for Dependabot.
+    # It is named the same as the Action secret so Dependabot is able to run CI-workflows, but it has to
+    # be configured separately as a Dependabot secret.
+    token: ${{secrets.ORG_PAT_READ_TOOLS}}
+updates:
+  - package-ecosystem: "npm"
+    open-pull-requests-limit: 10
+    registries:
+      - npm-github
+    directories:
+      - "/"
+    schedule:
+      interval: "daily"
+    versioning-strategy: "increase"
+    groups:
+      nodekit:
+        applies-to: version-updates
+        patterns:
+          - "@tv4/node-kit*"
+        update-types:
+          - "minor"
+          - "patch"

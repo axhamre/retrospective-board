@@ -1,0 +1,17 @@
+{
+   "name": "@packages/ecs-metadata",
+   "version": "1.0.0",
+   "description": "",
+   "author": "",
+   "type": "module",
+   "main": "src/meta.ts",
+   "scripts": {
+    "test": "node --disable-warning=ExperimentalWarning --test-force-exit --test \"src/**/*.test.ts\""
+  },
+   "dependencies": {
+      "@tv4/node-kit-logger": "^1.1.0"
+   },
+  "devDependencies": {
+   "undici": "^7.7.0"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "extends": "@tv4/node-kit-tsconfig/tsconfig.json",
+}

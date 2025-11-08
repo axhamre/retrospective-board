@@ -1,0 +1,11 @@
+
+{
+  "$schema": "https://raw.githubusercontent.com/open-feature/cli/refs/heads/main/schema/v0/flag-manifest.json",
+  "flags": {
+    "isHelloWorldSad": {
+      "flagType": "boolean",
+      "defaultValue": false,
+      "description": "Makes our greeting sad instead of the default happy."
+    }
+  }
+}

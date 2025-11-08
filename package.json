@@ -1,0 +1,33 @@
+{
+  "name": "{{REPOSITORY_NAME}}",
+  "version": "1.0.0",
+  "author": "{{OWNER}}",
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "deploy": "turbo run deploy",
+    "dev": "turbo run dev",
+    "format": "pnpm prettier --write  && pnpm lint --fix",
+    "format:check": "pnpm prettier --check",
+    "lint": "eslint --cache",
+    "prettier": "prettier --cache --log-level warn \"**/*.(js|ts|tsx)\"",
+    "test": "turbo run test",
+    "test:no-cache": "turbo run test --no-cache --force",
+    "type-check": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "^22.6.0"
+  },
+  "devDependencies": {
+    "@tv4/node-kit-eslint": "^1.2.3",
+    "@tv4/node-kit-tsconfig": "^1.2.17",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/node": "^22.16.5",
+    "eslint": "^9.31.0",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.5"
+  },
+  "packageManager": "pnpm@10.13.1"
+}

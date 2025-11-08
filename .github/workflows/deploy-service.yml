@@ -1,0 +1,28 @@
+name: "deploy Service"
+
+on:
+  workflow_call:
+    inputs:
+      service_name:
+        required: true
+        type: string
+        description: "Service name for Docker build args"
+      github_environment:
+        required: true
+        type: string
+        description: "GitHub environment for deployment"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy ${{ inputs.service_name }}
+    uses: tv4/backend-gh-actions/.github/workflows/ecs-deploy.yml@v1.0.1
+    with:
+      github_environment: ${{ inputs.github_environment }}
+      docker_build_args: SERVICE_NAME=${{ inputs.service_name }}
+      secrets: NODE_AUTH_TOKEN=ORG_PAT_READ_TOOLS
+      slack_messaging: false
+    secrets: inherit

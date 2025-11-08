@@ -1,0 +1,19 @@
+name: 📊 Deploy {{REPOSITORY_NAME}} Dashboards
+
+on:
+  workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+  packages: read
+
+jobs:
+  deploy:
+    uses: tv4/backend-gh-actions/.github/workflows/grafana-upsert.yml@main
+    with:
+      dashboards-yaml: |
+        - template: "httpOverview" 
+          service: "{{SERVICE_NAME}}"
+      folder-name: '{{OWNER}}/{{REPOSITORY_NAME}}'
+      # registry-path: 'packages/observability-registry' ## Uncomment this to use the registry defined in typescript instead of or in addition to the dashboards-yaml defined above
+    secrets: inherit

@@ -1,0 +1,28 @@
+name: "⏯️ deploy {{SERVICE_NAME}}"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+
+jobs:
+  deploy:
+    name: Deploy
+    strategy:
+      matrix:
+        environment: [
+          <TV4_ENVIRONMENT_DEV>, # TODO: Infra environments
+        ]
+    uses: ./.github/workflows/deploy-service.yml
+    with:
+      github_environment: ${{ matrix.environment }}
+      service_name: {{SERVICE_NAME}}
+    secrets: inherit

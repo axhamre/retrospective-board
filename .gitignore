@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+
+# turborepo
+.turbo
+
+# production
+build
+dist
+
+# misc
+.DS_Store
+.env
+!.env.dev
+
+# next.js
+.next
+out
+
+# editors
+.idea
+.vscode
+
+# eslint
+.eslintcache
+
+# typescript
+*.tsbuildinfo
+
+*.zip
+.aider*

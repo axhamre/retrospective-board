@@ -1,0 +1,29 @@
+{
+  "name": "{{SERVICE_NAME}}",
+  "version": "1.0.0",
+  "description": "{{DESCRIPTION}}",
+  "author": "{{OWNER}}",
+  "main": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "test": "tsx --env-file=.env.test --test \"src/**/*.test.ts\"",
+    "dev": "tsx --env-file=.env.dev --watch src/main.ts"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "1.17.1",
+    "@hono/swagger-ui": "0.5.2",
+    "@hono/zod-openapi": "0.19.10",
+    "@openfeature/open-telemetry-hooks": "^0.4.0",
+    "@openfeature/server-sdk": "^1.19.0",
+    "@packages/ecs-metadata": "workspace:*",
+    "@tv4/node-kit-features": "^1.0.2",
+    "@tv4/node-kit-insights": "^2.3.6",
+    "@tv4/node-kit-logger": "^2.0.0",
+    "@tv4/node-kit-observability": "^2.1.0",
+    "hono": "^4.9.6",
+    "tsx": "^4.20.4",
+    "zod": "^3.25.76"
+  }
+}
