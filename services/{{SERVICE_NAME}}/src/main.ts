@@ -1,9 +1,12 @@
 import type { AddressInfo } from 'node:net'
 import { serve } from '@hono/node-server'
-import log from '@tv4/node-kit-logger'
-import { openTelemetrySDK } from '@tv4/node-kit-observability'
+import { pino } from 'pino'
 import env from './env.ts'
 import { app } from './app.ts'
+
+const logger = pino({
+  level: env.LOG_LEVEL,
+})
 
 const server = serve(
   {
@@ -15,18 +18,16 @@ const server = serve(
     },
   },
   (info: AddressInfo) => {
-    log.info(`🚀 Hono Server ready at http://localhost:${info.port}/`)
+    logger.info(`🚀 Hono Server ready at http://localhost:${info.port}/`)
   }
 )
 
 const shutdown = () => {
-  log.info('shutting down server')
+  logger.info('shutting down server')
 
   server.close(() => {
-    void openTelemetrySDK.shutdown().then(() => {
-      log.info('server closed')
-      process.exit(0)
-    })
+    logger.info('server closed')
+    process.exit(0)
   })
 }
 

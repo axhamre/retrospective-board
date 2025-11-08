@@ -1,6 +1,5 @@
 import { createRoute, OpenAPIHono, z } from '@hono/zod-openapi'
-import { customMetrics, type Env } from '../app.ts'
-import { trackHelloWorld } from '../insights-reporter.ts'
+import type { Env } from '../app.ts'
 
 export default new OpenAPIHono<Env>().openapi(
   createRoute({
@@ -21,9 +20,6 @@ export default new OpenAPIHono<Env>().openapi(
     },
   }),
   async (c) => {
-    customMetrics.helloWorldsIssued.add(1)
-    await trackHelloWorld()
-
     return c.json({ message: 'Hello, World!' }, 200)
   }
 )
