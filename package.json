@@ -12,7 +12,7 @@
     "prettier": "prettier --cache --log-level warn \"**/*.(js|ts|tsx)\"",
     "test": "turbo run test",
     "test:no-cache": "turbo run test --no-cache --force",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc -b"
   },
   "engines": {
     "node": "^22.6.0"
