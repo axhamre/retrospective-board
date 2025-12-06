@@ -33,7 +33,7 @@ const routeTree = rootRoute.addChildren([indexRoute])
 const router = createRouter({ routeTree })
 
 declare module '@tanstack/react-router' {
-  type Register = {
+  interface Register {
     router: typeof router
   }
 }
