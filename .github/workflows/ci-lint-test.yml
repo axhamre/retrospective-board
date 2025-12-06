@@ -36,8 +36,6 @@ jobs:
           cache: pnpm
           registry-url: 'https://npm.pkg.github.com'
           scope: '@tv4'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.ORG_PAT_READ_TOOLS }}
       - name: Install dependencies
         run: pnpm install
       - name: Check Format
@@ -71,8 +69,6 @@ jobs:
           cache: pnpm
           registry-url: 'https://npm.pkg.github.com'
           scope: '@tv4'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.ORG_PAT_READ_TOOLS }}
       - name: Install dependencies
         run: pnpm install
       - name: Run Tests
