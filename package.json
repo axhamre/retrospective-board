@@ -1,11 +1,10 @@
 {
-  "name": "{{REPOSITORY_NAME}}",
+  "name": "retrospective-board",
   "version": "1.0.0",
-  "author": "{{OWNER}}",
+  "private": true,
   "type": "module",
   "scripts": {
     "build": "turbo run build",
-    "deploy": "turbo run deploy",
     "dev": "turbo run dev",
     "format": "pnpm prettier --write  && pnpm lint --fix",
     "format:check": "pnpm prettier --check",

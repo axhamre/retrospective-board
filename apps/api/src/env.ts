@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 const envSchema = z.object({
   SERVICE_INSTANCE_ID: z.string().default('unknown'),
-  SERVICE_NAME: z.string().default('{{SERVICE_NAME}}'),
+  SERVICE_NAME: z.string().default('@retrospective-board/api'),
   SERVICE_VERSION: z.string().default('unknown'),
   LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
   PORT: z.coerce.number().default(8080),
