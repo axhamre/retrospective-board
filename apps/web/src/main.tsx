@@ -12,7 +12,7 @@ const rootRoute = createRootRoute({
       </div>
       <Outlet />
     </>
-  )
+  ),
 })
 
 const indexRoute = createRoute({
@@ -25,7 +25,7 @@ const indexRoute = createRoute({
         <p>Start by creating a new retrospective session.</p>
       </div>
     )
-  }
+  },
 })
 
 const routeTree = rootRoute.addChildren([indexRoute])
@@ -33,12 +33,15 @@ const routeTree = rootRoute.addChildren([indexRoute])
 const router = createRouter({ routeTree })
 
 declare module '@tanstack/react-router' {
-  interface Register {
+  type Register = {
     router: typeof router
   }
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root')
+if (!rootElement) throw new Error('Root element not found')
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
