@@ -3,6 +3,9 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
+  {
+    ignores: ['**/vite.config.d.ts'],
+  },
   ...recommended,
 
   // React-specific rules for web app
