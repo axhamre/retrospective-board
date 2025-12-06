@@ -8,19 +8,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@types/node':
-        specifier: ^22.16.5
-        version: 22.16.5
-      eslint:
-        specifier: ^9.31.0
-        version: 9.31.0
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
-      turbo:
-        specifier: ^2.5.5
-        version: 2.5.5
     devDependencies:
       '@tv4/node-kit-eslint':
         specifier: ^1.2.3
@@ -28,6 +15,24 @@ importers:
       '@tv4/node-kit-tsconfig':
         specifier: ^1.2.17
         version: 1.2.17
+      '@types/node':
+        specifier: ^22.16.5
+        version: 22.16.5
+      eslint:
+        specifier: ^9.31.0
+        version: 9.31.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0
+        version: 5.2.0(eslint@9.31.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.19
+        version: 0.4.24(eslint@9.31.0)
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
+      turbo:
+        specifier: ^2.5.5
+        version: 2.5.5
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -1351,6 +1356,17 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
       jsonc-eslint-parser: ^2.0.0
+
+  eslint-plugin-react-hooks@5.2.0:
+    resolution: {integrity: sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
+
+  eslint-plugin-react-refresh@0.4.24:
+    resolution: {integrity: sha512-nLHIW7TEq3aLrEYWpVaJ1dRgFR+wLDPN8e8FpYAql/bMV2oBEfC37K0gLEGgv9fy66juNShSMV8OkTqzltcG/w==}
+    peerDependencies:
+      eslint: '>=8.40'
 
   eslint-plugin-unicorn@59.0.1:
     resolution: {integrity: sha512-EtNXYuWPUmkgSU2E7Ttn57LbRREQesIP1BiLn7OZLKodopKfDXfBUkC/0j6mpw2JExwf43Uf3qLSvrSvppgy8Q==}
@@ -3502,6 +3518,14 @@ snapshots:
       validate-npm-package-name: 6.0.0
     transitivePeerDependencies:
       - '@types/estree'
+
+  eslint-plugin-react-hooks@5.2.0(eslint@9.31.0):
+    dependencies:
+      eslint: 9.31.0
+
+  eslint-plugin-react-refresh@0.4.24(eslint@9.31.0):
+    dependencies:
+      eslint: 9.31.0
 
   eslint-plugin-unicorn@59.0.1(eslint@9.31.0):
     dependencies:
