@@ -12,6 +12,7 @@ dist
 .DS_Store
 .env
 !.env.dev
+assets
 
 # next.js
 .next
@@ -26,6 +27,10 @@ out
 
 # typescript
 *.tsbuildinfo
+# TypeScript build artifacts for config files
+**/vite.config.js
+**/vite.config.d.ts
+**/vite.config.d.ts.map
 
 *.zip
 .aider*

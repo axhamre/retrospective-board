@@ -6,6 +6,15 @@ import { app } from './app.ts'
 
 const logger = pino({
   level: env.LOG_LEVEL,
+  transport: env.PRETTY_LOGS
+    ? {
+        target: 'pino-pretty',
+        options: {
+          colorize: true,
+          translateTime: 'HH:MM:ss.l',
+        },
+      }
+    : undefined,
 })
 
 const server = serve(

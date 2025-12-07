@@ -19,7 +19,7 @@ export default new OpenAPIHono<Env>().openapi(
       },
     },
   }),
-  async (c) => {
+  (c) => {
     return c.json({ message: 'Hello, World!' }, 200)
   }
 )

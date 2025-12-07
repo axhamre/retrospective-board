@@ -1,5 +1,4 @@
-bootstrap:
-	./scripts/bootstrap.sh
+.PHONY: lint format test type-check check
 
 lint:
 	pnpm lint
@@ -10,4 +9,11 @@ format:
 test:
 	pnpm test
 
-check: format lint test
+type-check:
+	pnpm type-check
+
+check:
+	pnpm format:check
+	pnpm lint
+	pnpm type-check
+	pnpm test

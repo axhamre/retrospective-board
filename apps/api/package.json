@@ -1,13 +1,13 @@
 {
-  "name": "{{SERVICE_NAME}}",
+  "name": "@retrospective-board/api",
   "version": "1.0.0",
-  "description": "{{DESCRIPTION}}",
-  "author": "{{OWNER}}",
+  "description": "Backend API",
   "main": "src/app.ts",
   "type": "module",
   "scripts": {
     "test": "tsx --env-file=.env.test --test \"src/**/*.test.ts\"",
-    "dev": "tsx --env-file=.env.dev --watch src/main.ts"
+    "dev": "tsx --env-file=.env.dev --watch src/main.ts",
+    "build": "tsc --noEmit"
   },
   "keywords": [],
   "license": "ISC",

@@ -1,0 +1,10 @@
+{
+  "extends": "@tv4/node-kit-tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "skipLibCheck": true
+  }
+}
