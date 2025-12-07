@@ -33,3 +33,6 @@ out
 
 *.zip
 .aider*
+
+# TanStack Router generated
+**/routeTree.gen.ts
