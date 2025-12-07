@@ -12,6 +12,7 @@ dist
 .DS_Store
 .env
 !.env.dev
+assets
 
 # next.js
 .next
@@ -33,6 +34,3 @@ out
 
 *.zip
 .aider*
-
-# TanStack Router generated
-**/routeTree.gen.ts
