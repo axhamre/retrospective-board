@@ -1,8 +1,9 @@
-import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), TanStackRouterVite()],
   server: {
     port: 3000,
     proxy: {
