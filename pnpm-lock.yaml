@@ -40,20 +40,20 @@ importers:
   apps/api:
     dependencies:
       '@hono/node-server':
-        specifier: 1.17.1
-        version: 1.17.1(hono@4.10.7)
+        specifier: ^1.19.6
+        version: 1.19.6(hono@4.10.7)
       '@hono/swagger-ui':
-        specifier: 0.5.2
+        specifier: ^0.5.2
         version: 0.5.2(hono@4.10.7)
       '@hono/zod-openapi':
-        specifier: 1.1.5
+        specifier: ^1.1.5
         version: 1.1.5(hono@4.10.7)(zod@4.1.13)
       hono:
         specifier: ^4.10.7
         version: 4.10.7
       hono-pino:
-        specifier: ^0.5.0
-        version: 0.5.1(hono@4.10.7)(pino@10.1.0)
+        specifier: ^0.10.3
+        version: 0.10.3(hono@4.10.7)(pino@10.1.0)
       pino:
         specifier: ^10.1.0
         version: 10.1.0
@@ -617,8 +617,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hono/node-server@1.17.1':
-    resolution: {integrity: sha512-SY79W/C+2b1MyAzmIcV32Q47vO1b5XwLRwj8S9N6Jr5n1QCkIfAIH6umOSgqWZ4/v67hg6qq8Ha5vZonVidGsg==}
+  '@hono/node-server@1.19.6':
+    resolution: {integrity: sha512-Shz/KjlIeAhfiuE93NDKVdZ7HdBVLQAfdbaXEaoAVO3ic9ibRSLGIQGkcBbFyuLr+7/1D5ZCINM8B+6IvXeMtw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1597,8 +1597,8 @@ packages:
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
 
-  hono-pino@0.5.1:
-    resolution: {integrity: sha512-gb7LQjIN9kvZMVn7QS5NvmXSH21+sThaUDiX/TjVg0axlq0pXxdiULvCXRKhISOiZOdjbHuylm8eDgT3w1tXsw==}
+  hono-pino@0.10.3:
+    resolution: {integrity: sha512-n0RNPIFOoq25Fg8b4D5gus4sVqI0z+8I17ibl96+p43d07UnZ0EMM/It0qSgfc7UtaC+XP5FkFmRHwBp6owsNA==}
     engines: {node: '>=18'}
     peerDependencies:
       hono: '>=4.0.0'
@@ -2727,7 +2727,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hono/node-server@1.17.1(hono@4.10.7)':
+  '@hono/node-server@1.19.6(hono@4.10.7)':
     dependencies:
       hono: 4.10.7
 
@@ -3758,7 +3758,7 @@ snapshots:
     dependencies:
       hermes-estree: 0.25.1
 
-  hono-pino@0.5.1(hono@4.10.7)(pino@10.1.0):
+  hono-pino@0.10.3(hono@4.10.7)(pino@10.1.0):
     dependencies:
       defu: 6.1.4
       hono: 4.10.7
