@@ -5,7 +5,10 @@ const envSchema = z.object({
   SERVICE_NAME: z.string().default('@retrospective-board/api'),
   SERVICE_VERSION: z.string().default('unknown'),
   LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
-  PRETTY_LOGS: z.coerce.boolean().optional().default(process.env.NODE_ENV !== 'production'),
+  PRETTY_LOGS: z.coerce
+    .boolean()
+    .optional()
+    .default(process.env.NODE_ENV !== 'production'),
   PORT: z.coerce.number().default(8080),
 })
 
