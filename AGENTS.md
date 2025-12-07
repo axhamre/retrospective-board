@@ -5,6 +5,11 @@
 
 Instructions: Update this section whenever there are significant architectural changes. List only the most important architectural decisions or patterns (max 5). If there are fewer than 5 significant items, do not add filler content. Max 100 chars per item.
 
+## Verification
+Before creating a commit or requesting review:
+1. Run `make check` to ensure all linting, formatting, type checking, and tests pass.
+2. Fix any errors immediately. Do not commit broken code.
+
 ## Git
 
 1. Review `git diff` and `git status`
