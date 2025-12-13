@@ -16,4 +16,4 @@ CRITICAL: Do NOT add these to commits or PRs:
 Keep commits clean without AI attribution.
 
 ## Language guidelines
-Sentence case: Use for all text, including headings. Do not use title case.
+Use sentence case. I.e. this is right: Unresolved questions, this is wrong: Unresolved Questions, this is wrong: unresolved questions.
